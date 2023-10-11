@@ -1,0 +1,37 @@
+$buttonBackgroundColor: #605DC7;
+$buttonHoverColor: #6865DA;
+$buttonActiveColor: #5250AB;
+$buttonTextColor: white;
+$buttonDisableColor: #F5F5F5;
+$buttonDisableTextColor: #C2C2C2;
+
+.button__wrapper {
+    font-size: 16px;
+    text-align: center;
+    color: $buttonTextColor;
+    padding: 12px 40px;
+    border-radius: 5px;
+    background-color: $buttonBackgroundColor;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+    &:hover, &:focus {
+        background-color: $buttonHoverColor;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        background-color: $buttonActiveColor;
+        transition: background-color 0.3s;
+    }
+
+    &:disabled {
+        background-color: $buttonDisableColor;
+        color: $buttonDisableTextColor;
+        cursor: not-allowed;
+    }
+}
