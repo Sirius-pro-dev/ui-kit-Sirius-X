@@ -1,5 +1,5 @@
-import React from "react";
-import "./UIButton.scss";
+import React from 'react';
+import './UIButton.scss';
 
 export interface UIButtonProps {
   label: string;
