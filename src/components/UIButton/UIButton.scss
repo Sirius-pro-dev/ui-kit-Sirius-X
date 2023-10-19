@@ -1,37 +1,41 @@
-$buttonBackgroundColor: #605DC7;
-$buttonHoverColor: #6865DA;
-$buttonActiveColor: #5250AB;
+$buttonBackgroundColor: #605dc7;
+$buttonHoverColor: #6865da;
+$buttonActiveColor: #5250ab;
 $buttonTextColor: white;
-$buttonDisableColor: #F5F5F5;
-$buttonDisableTextColor: #C2C2C2;
+$buttonDisableColor: #f5f5f5;
+$buttonDisableTextColor: #c2c2c2;
 
 .button__wrapper {
-    font-size: 16px;
-    text-align: center;
-    color: $buttonTextColor;
-    padding: 12px 40px;
-    border-radius: 5px;
-    background-color: $buttonBackgroundColor;
-    border: 0;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  font-size: 16px;
+  text-align: center;
+  color: $buttonTextColor;
+  padding: 12px 40px;
+  border-radius: 5px;
+  background-color: $buttonBackgroundColor;
+  border: 0;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.3s,
+    box-shadow 0.3s;
 
-    &:hover, &:focus {
-        background-color: $buttonHoverColor;
-    }
+  &:hover,
+  &:focus {
+    background-color: $buttonHoverColor;
+  }
 
-    &:focus {
-        outline: none;
-    }
+  &:focus {
+    outline: none;
+  }
 
-    &:active {
-        background-color: $buttonActiveColor;
-        transition: background-color 0.3s;
-    }
+  &:active {
+    background-color: $buttonActiveColor;
+    transition: background-color 0.3s;
+  }
 
-    &:disabled {
-        background-color: $buttonDisableColor;
-        color: $buttonDisableTextColor;
-        cursor: not-allowed;
-    }
+  &:disabled {
+    background-color: $buttonDisableColor;
+    color: $buttonDisableTextColor;
+    cursor: not-allowed;
+  }
 }
