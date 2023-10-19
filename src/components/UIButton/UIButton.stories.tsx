@@ -7,7 +7,9 @@ export default {
   component: UIButton,
 } as ComponentMeta<typeof UIButton>;
 
-const Template: ComponentStory<typeof UIButton> = (args) => <UIButton {...args} />;
+const Template: ComponentStory<typeof UIButton> = (args) => (
+  <UIButton {...args} />
+);
 
 export const UIButtonInstance = Template.bind({});
 UIButtonInstance.args = {
