@@ -1,0 +1,73 @@
+// RegistrationForm.scss
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+    background-color: lightpurple;
+    font-family: 'Jost', sans-serif;
+}
+
+.registration-form {
+    background-color: #97ABE0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 660px;
+    height: 660px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+    border-radius: 30px;
+
+    &__title {
+        font-size: 24px;
+        margin: 0 auto;
+    }
+
+    &__button {
+        width: 300px;
+        padding: 10px;
+        color: white;
+        background-color: #605DC7;
+        border: #605DC7 2px solid;
+        border-radius: 5px;
+        font-size: 13px;
+    }
+}
+
+.input-field {
+    &__input {
+        width: 280px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: #fff 2px solid;
+        border-radius: 4px;
+    }
+
+    &__label {
+        font-size: 12px;
+        margin-bottom: -12px;
+
+        &__star {
+            color: #000;
+        }
+    }
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__input {
+        width: 16px;
+        height: 16px;
+        border: #fff 1px solid;
+        border-radius: 10px;
+    }
+
+    &__info {
+        font-size: 11px;
+        max-width: 265px;
+        line-height: 16px; 
+    }
+}
