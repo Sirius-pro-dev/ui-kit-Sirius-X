@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+    background-color: lightpurple;
+    font-family: 'Jost', sans-serif;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__input {
+        width: 16px;
+        height: 16px;
+        border: #fff 1px solid;
+        border-radius: 10px;
+    }
+
+    &__info {
+        font-size: 11px;
+        max-width: 265px;
+        line-height: 16px; 
+    }
+}
