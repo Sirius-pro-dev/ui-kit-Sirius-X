@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+    background-color: lightpurple;
+    font-family: 'Jost', sans-serif;
+}
+
+.input-field {
+    &__container {
+        display: grid;
+        gap: 12px;
+    }
+
+    &__input {
+        width: 280px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: #000 2px solid;
+        border-radius: 4px;
+    }
+
+    &__label {
+        font-size: 12px;
+        margin-bottom: -12px;
+
+        &__star {
+            color: #000;
+        }
+    }
+}
+
