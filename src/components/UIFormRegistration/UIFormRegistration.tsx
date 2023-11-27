@@ -3,7 +3,7 @@ import './UIFormRegistration.scss';
 import InputField from './InputField';
 import Checkbox from './Checkbox';
 
-interface UIFormRegistrationProps {
+export interface UIFormRegistrationProps {
   title: string;
   fields: {
       type: string;

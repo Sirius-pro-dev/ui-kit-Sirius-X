@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import './UICheckBox.scss';
 
-interface CheckboxProps {
+export interface CheckboxProps {
     id: string;
     label: string;
 }

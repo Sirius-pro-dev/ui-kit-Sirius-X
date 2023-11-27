@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './UIModal.scss';
-import Vector from './Vector.svg';
+// import Vector from './Vector.svg';
 
-interface ModalProps {
+export interface ModalProps {
   title: string;
   subtitle: string;
   list: string[];
@@ -18,7 +18,7 @@ const Modal: React.FC<ModalProps> = ({ title, subtitle, list }) => {
   return (
     <div className={`modal ${isOpen ? 'open' : ''}`}>
       <div className="modal-content">
-        <img className="close" src={Vector} onClick={toggleModal} />
+        {/* <img className="close" src={Vector} alt={'close-icon'} onClick={toggleModal} /> */}
         <h2>{title}</h2>
         <div className="modal-content__info">
           <h3>{subtitle}</h3>

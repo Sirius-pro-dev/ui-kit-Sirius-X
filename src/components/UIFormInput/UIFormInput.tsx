@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import './UIFormInput.scss';
 
-interface InputFieldProps {
+export interface InputFieldProps {
     type: string;
     placeholder: string;
     label: string;

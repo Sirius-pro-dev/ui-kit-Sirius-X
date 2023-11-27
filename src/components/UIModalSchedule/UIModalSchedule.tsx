@@ -32,7 +32,7 @@ const ModalSchedule = ({ title, subtitle = defaultSubtitle, data }: ModalSchedul
     setIsOpen(!isOpen);
   };
 
-  const dataMapping = {
+  const dataMapping: any = {
     'День': dataDay?.day || '-',
     'Время': time || '-',
     'Дисциплина': name || '-',
