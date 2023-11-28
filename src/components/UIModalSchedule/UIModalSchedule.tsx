@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './UIModalSchedule.scss';
-import Vector from './Vector.svg';
+const vector = require('./Vector.svg')
 
 export interface ModalScheduleProps {
   title: string;
@@ -23,7 +23,7 @@ export interface ModalScheduleProps {
 
 const defaultSubtitle = ['День', 'Время', 'Дисциплина', 'Тип', 'Преподаватель', 'Адрес', 'Аудитория', 'Группа']
 
-const ModalSchedule = ({ title, subtitle = defaultSubtitle, data }: ModalScheduleProps) => {
+const ModalSchedule: React.FC<ModalScheduleProps> = ({ title, subtitle = defaultSubtitle, data }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   const { dataDay, time, name, classType, teacher, placeActivity, classRoom, group } = data;
@@ -49,7 +49,7 @@ const ModalSchedule = ({ title, subtitle = defaultSubtitle, data }: ModalSchedul
         <div className='modal-wrapper'>
           <div className='modal__title-container'>
             <p className='modal__title'>{title}</p>
-            <img className='modal__close-icon' src={Vector} alt={'close-icon'} onClick={toggleModal} />
+            <img className='modal__close-icon' src={vector} alt={'close-icon'} onClick={toggleModal} />
           </div>
           <div className="modal__info-wrapper">
             {subtitle.map((sub, index) => (
