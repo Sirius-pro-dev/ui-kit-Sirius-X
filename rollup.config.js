@@ -3,7 +3,8 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
-import image from 'rollup-plugin-image';
+import copy from "rollup-plugin-copy";
+import image from "rollup-plugin-image";
 
 const packageJson = require("./package.json");
 
@@ -27,7 +28,12 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss(),
-      image()
+      image(),
+      copy({
+        targets: [
+          { src: 'src/assets/**/*', dest: 'dist/public/images' }
+        ]
+      })
     ],
   },
   {
