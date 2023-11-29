@@ -5,6 +5,7 @@ import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
 import copy from "rollup-plugin-copy";
 import image from "rollup-plugin-image";
+import svgr from "@svgr/rollup";
 
 const packageJson = require("./package.json");
 
@@ -29,12 +30,13 @@ export default [
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss(),
       image(),
-      copy({
-        targets: [
-          { src: 'src/assets/**/*', dest: 'dist/cjs/assets' },
-          { src: 'src/assets/**/*', dest: 'dist/esm/assets' }
-        ]
-      })
+      svgr()
+      // copy({
+      //   targets: [
+      //     { src: 'src/assets/**/*', dest: 'dist/cjs/assets' },
+      //     { src: 'src/assets/**/*', dest: 'dist/esm/assets' }
+      //   ]
+      // })
     ],
   },
   {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './UIModalSchedule.scss';
-const vector = require('../../assets/Vector.svg')
+import vector from '../../assets/Vector.svg';
 
 export interface ModalScheduleProps {
   title: string;
