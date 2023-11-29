@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './UIModalSchedule.scss';
-import vector from '../../assets/Vector.svg';
+// import vector from '../../assets/Vector.svg';
+// import Icon from '@mdi/react';
+// import { mdiCloseCircleOutline } from '@mdi/js';
 
 export interface ModalScheduleProps {
   title: string;
   subtitle?: string[];
+  isOpen: boolean;
+  onClose: () => void;
   data: {
     dataDay?: {
       day?: string;
@@ -23,14 +27,8 @@ export interface ModalScheduleProps {
 
 const defaultSubtitle = ['День', 'Время', 'Дисциплина', 'Тип', 'Преподаватель', 'Адрес', 'Аудитория', 'Группа']
 
-const ModalSchedule: React.FC<ModalScheduleProps> = ({ title, subtitle = defaultSubtitle, data }) => {
-  const [isOpen, setIsOpen] = useState(true);
-
+const ModalSchedule: React.FC<ModalScheduleProps> = ({ title, subtitle = defaultSubtitle, data, isOpen, onClose }) => {
   const { dataDay, time, name, classType, teacher, placeActivity, classRoom, group } = data;
-
-  const toggleModal = () => {
-    setIsOpen(!isOpen);
-  };
 
   const dataMapping: any = {
     'День': dataDay?.day || '-',
@@ -49,7 +47,8 @@ const ModalSchedule: React.FC<ModalScheduleProps> = ({ title, subtitle = default
         <div className='modal-wrapper'>
           <div className='modal__title-container'>
             <p className='modal__title'>{title}</p>
-            <img className='modal__close-icon' src={vector} alt={'close-icon'} onClick={toggleModal} />
+        <div className="modal__close-icon" onClick={onClose}>X</div>
+            {/* <img className='modal__close-icon' src={vector} alt={'close-icon'} onClick={onClose} /> */}
           </div>
           <div className="modal__info-wrapper">
             {subtitle.map((sub, index) => (

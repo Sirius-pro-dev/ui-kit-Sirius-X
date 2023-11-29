@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/Olegyesterdays"
   },
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "example lib react component for sirius",
   "scripts": {
     "rollup": "rollup -c",
@@ -57,5 +57,9 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@mdi/js": "^7.3.67",
+    "@mdi/react": "^1.6.1"
+  }
 }

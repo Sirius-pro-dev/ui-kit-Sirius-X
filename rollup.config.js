@@ -3,7 +3,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
-import copy from "rollup-plugin-copy";
+// import copy from "rollup-plugin-copy";
 import image from "rollup-plugin-image";
 import svgr from "@svgr/rollup";
 
@@ -40,7 +40,7 @@ export default [
     ],
   },
   {
-    input: "dist/esm/types/index.d.ts",
+    input: "dist/esm/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
     external: [/\.(css|less|scss)$/],
