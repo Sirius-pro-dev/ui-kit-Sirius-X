@@ -1,8 +1,5 @@
 import React from 'react';
 import './UIModalSchedule.scss';
-// import vector from '../../assets/Vector.svg';
-// import Icon from '@mdi/react';
-// import { mdiCloseCircleOutline } from '@mdi/js';
 
 export interface ModalScheduleProps {
   title: string;
@@ -47,8 +44,9 @@ const ModalSchedule: React.FC<ModalScheduleProps> = ({ title, subtitle = default
         <div className='modal-wrapper'>
           <div className='modal__title-container'>
             <p className='modal__title'>{title}</p>
-        <div className="modal__close-icon" onClick={onClose}>X</div>
-            {/* <img className='modal__close-icon' src={vector} alt={'close-icon'} onClick={onClose} /> */}
+            <div className="modal__close-icon" onClick={onClose}>
+              <div className="modal__close-cross"></div>
+            </div>
           </div>
           <div className="modal__info-wrapper">
             {subtitle.map((sub, index) => (

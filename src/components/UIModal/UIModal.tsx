@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import './UIModal.scss';
-// import vector from '../../assets/Vector.svg'
-// import Icon from '@mdi/react';
-// import { mdiCloseCircleOutline } from '@mdi/js';
 
 export interface ModalProps {
   title: string;
@@ -20,8 +17,9 @@ const Modal: React.FC<ModalProps> = ({ title, subtitle, list }) => {
   return (
     <div className={`modal ${isOpen ? 'open' : ''}`}>
       <div className="modal-content">
-        {/* <img className="close" src={vector} alt={'close-icon'} onClick={toggleModal} /> */}
-        <div className="close" onClick={toggleModal}>X</div>
+        <div className="close" onClick={toggleModal}>
+          <div className="close-cross"></div>
+        </div>
         <h2>{title}</h2>
         <div className="modal-content__info">
           <h3>{subtitle}</h3>

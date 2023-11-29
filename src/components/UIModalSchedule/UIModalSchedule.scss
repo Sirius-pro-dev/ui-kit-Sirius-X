@@ -4,6 +4,8 @@ $background-color: rgba(0,0,0,0.4);
 $background-color-middleWhite: #F4F4F9;
 $color_white: #fff;
 $color_separator: #F3F4F6;
+$color_lavander: #97ABE0;
+$color_contrast: #605DC7;
 
 .modal-container {
 	display: none;
@@ -47,14 +49,35 @@ $color_separator: #F3F4F6;
 }
 
 .modal__close-icon {
-	color: $color_gray;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	position: absolute;
-	top: 25px;
-	right: 18px;
-	border: 1px solid;
+	top: 22px;
+	right: 20px;
+	width: 20px;
+	height: 20px;
 	border-radius: 50%;
-	padding: 0 8px;
+	border: 2px solid $color_lavander;
 	cursor: pointer;
+}
+
+.modal__close-cross {
+	width: 12px;
+	height: 2px;
+	background-color: $color_lavander;
+	position: relative;
+	transform: rotate(45deg);
+}
+
+.modal__close-cross::after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background-color: $color_lavander;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) rotate(-90deg);
 }
 
 .modal__title-container {
