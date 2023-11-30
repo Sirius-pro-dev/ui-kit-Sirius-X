@@ -101,5 +101,7 @@ const data = {
 }
 UIModalScheduleInstance.args = {
     title: 'Информация о событии',
-    data: data
+    data: data,
+    isOpen: true,
+    onClose: () => false
 };

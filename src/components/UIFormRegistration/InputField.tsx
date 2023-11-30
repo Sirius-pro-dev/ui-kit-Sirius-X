@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-interface InputFieldProps {
+export interface InputFieldProps {
     type: string;
     placeholder: string;
     label: string;

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-interface CheckboxProps {
+export interface CheckboxProps {
     id: string;
     label: string;
 }
